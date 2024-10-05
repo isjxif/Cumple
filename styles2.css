@@ -1,0 +1,231 @@
+/* Estilos globales */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Pacifico', cursive;
+    overflow: hidden;
+    color: white;
+}
+
+h1 {
+    font-size: 4em;
+    color: #ff4500;
+    text-shadow: 2px 2px 5px #000;
+    position: absolute;
+    top: 30%;
+    animation: bounce 2s infinite;
+}
+
+/* Contenedor principal para todos los fuegos artificiales */
+.fireworks-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Contenedor individual para cada fuego artificial */
+.firework-container {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.firework {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+}
+
+/* Partículas generales */
+.particle {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    animation: explode 2s ease-out infinite;
+}
+
+/* Animación de explosión */
+@keyframes explode {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2.5);
+    }
+}
+
+/* Posiciones de las partículas */
+.particle:nth-child(1) {
+    top: -80px;
+    left: 0;
+}
+
+.particle:nth-child(2) {
+    top: -60px;
+    left: 60px;
+}
+
+.particle:nth-child(3) {
+    top: 0;
+    left: 90px;
+}
+
+.particle:nth-child(4) {
+    top: 60px;
+    left: 60px;
+}
+
+.particle:nth-child(5) {
+    top: 80px;
+    left: 0;
+}
+
+.particle:nth-child(6) {
+    top: 60px;
+    left: -60px;
+}
+
+.particle:nth-child(7) {
+    top: 0;
+    left: -90px;
+}
+
+.particle:nth-child(8) {
+    top: -60px;
+    left: -60px;
+}
+
+/* Fuego artificial 1 (Amarillo más oscuro) */
+.firework.dark-yellow .particle {
+    background-color: #6b6b00; /* Amarillo más oscuro */
+    box-shadow: 0 0 15px rgba(107, 107, 0, 1), 0 0 30px rgba(107, 107, 0, 0.8), 0 0 45px rgba(107, 107, 0, 0.6);
+}
+
+/* Fuego artificial 2 (Rojo más oscuro) */
+.firework.dark-red .particle {
+    background-color: #600000; /* Rojo más oscuro */
+    box-shadow: 0 0 15px rgba(96, 0, 0, 1), 0 0 30px rgba(96, 0, 0, 0.8), 0 0 45px rgba(96, 0, 0, 0.6);
+}
+
+/* Fuego artificial 3 (Azul más oscuro) */
+.firework.dark-blue .particle {
+    background-color: #000060; /* Azul más oscuro */
+    box-shadow: 0 0 15px rgba(0, 0, 96, 1), 0 0 30px rgba(0, 0, 96, 0.8), 0 0 45px rgba(0, 0, 96, 0.6);
+}
+
+/* Fuego artificial 4 (Verde más oscuro) */
+.firework.dark-green .particle {
+    background-color: #003d00; /* Verde más oscuro */
+    box-shadow: 0 0 15px rgba(0, 61, 0, 1), 0 0 30px rgba(0, 61, 0, 0.8), 0 0 45px rgba(0, 61, 0, 0.6);
+}
+
+/* Fuego artificial 5 (Naranja más oscuro) */
+.firework.dark-orange .particle {
+    background-color: #6b3310; /* Naranja más oscuro */
+    box-shadow: 0 0 15px rgba(107, 51, 16, 1), 0 0 30px rgba(107, 51, 16, 0.8), 0 0 45px rgba(107, 51, 16, 0.6);
+}
+
+/* Fuego artificial 6 (Morado más oscuro) */
+.firework.dark-purple .particle {
+    background-color: #320066; /* Morado más oscuro */
+    box-shadow: 0 0 15px rgba(50, 0, 102, 1), 0 0 30px rgba(50, 0, 102, 0.8), 0 0 45px rgba(50, 0, 102, 0.6);
+}
+
+/* Fuego artificial 7 (Rosa oscuro) */
+.firework.dark-pink .particle {
+    background-color: #c71585;
+    box-shadow: 0 0 15px rgba(199, 21, 133, 1), 0 0 30px rgba(199, 21, 133, 0.8), 0 0 45px rgba(199, 21, 133, 0.6);
+}
+
+/* Fuego artificial 8 (Cyan oscuro) */
+.firework.dark-cyan .particle {
+    background-color: #008b8b;
+    box-shadow: 0 0 15px rgba(0, 139, 139, 1), 0 0 30px rgba(0, 139, 139, 0.8), 0 0 45px rgba(0, 139, 139, 0.6);
+}
+
+/* Rebote del texto */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Estilo del confeti */
+.confetti {
+    position: fixed;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+    background-color: #ff4081; /* Color inicial */
+    animation: fall 3s infinite linear;
+    opacity: 0.7;
+    z-index: 1000;
+  }
+  
+  /* Variaciones de color para el confeti */
+  .confetti:nth-child(2) { background-color: #3f51b5; }  /* Azul */
+  .confetti:nth-child(3) { background-color: #4caf50; }  /* Verde */
+  .confetti:nth-child(4) { background-color: #ffeb3b; }  /* Amarillo */
+  .confetti:nth-child(5) { background-color: #ff5722; }  /* Naranja */
+  .confetti:nth-child(6) { background-color: #9c27b0; }  /* Morado */
+  .confetti:nth-child(7) { background-color: #00bcd4; }  /* Turquesa */
+  .confetti:nth-child(8) { background-color: #e91e63; }  /* Rosa fuerte */
+  .confetti:nth-child(9) { background-color: #8bc34a; }  /* Lima */
+  
+  /* Posiciones fijas para que no caigan en el mismo lugar */
+  .confetti:nth-child(1) { left: 10%; }
+  .confetti:nth-child(2) { left: 20%; }
+  .confetti:nth-child(3) { left: 30%; }
+  .confetti:nth-child(4) { left: 40%; }
+  .confetti:nth-child(5) { left: 50%; }
+  .confetti:nth-child(6) { left: 60%; }
+  .confetti:nth-child(7) { left: 70%; }
+  .confetti:nth-child(8) { left: 80%; }
+  .confetti:nth-child(9) { left: 90%; }
+  
+  /* Variaciones de velocidad de caída */
+  .confetti:nth-child(2n) { animation-duration: 4s; }  /* Caída más lenta */
+  .confetti:nth-child(3n) { animation-duration: 2s; }  /* Caída más rápida */
+  .confetti:nth-child(4n) { animation-duration: 5s; }  /* Caída más lenta */
+  .confetti:nth-child(5n) { animation-duration: 3s; }  /* Velocidad normal */
+  
+  /* Animación de caída */
+  @keyframes fall {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(100vh) rotate(360deg); }
+  }
+
+  
+  @keyframes explode {
+    0% { transform: scale(0); opacity: 1; }
+    100% { transform: scale(2); opacity: 0; }
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0); opacity: 0.6; }
+    50% { transform: translateY(-30px); opacity: 1; }
+    100% { transform: translateY(0); opacity: 0.6; }
+  }
+  
+
+
+  

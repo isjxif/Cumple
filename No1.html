@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Parte de las configuraciones del fondo de esta pagina web-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffcccc;
+            color: #b22222;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            font-size: 3em;
+        }
+        p {
+            font-size: 1.5em;
+        }
+        button {
+            background-color: #f86565;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #e63946;
+        }
+    </style>
+</head>
+<!--Parte de texto-->
+<body>
+    <div>
+        <h1>Error! ❌</h1>
+        <p>Ya se que quieres un buji</p>
+     <!-- Botón para volver a la página de preguntas -->
+     <button onclick="goBack()">Vuelve a intentar</button>
+    </div>
+
+    <script>
+        // Función para volver a la página principal (index.html)
+        function goBack() {
+            window.location.href = "Question1.html";  // Redirige a la página principal
+        }
+    </script>
+</body>
+</html>

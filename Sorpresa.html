@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles2.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Pacifico', cursive;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 4em;
+            color: #FF0039;
+            text-shadow: 2px 2px 5px #000;
+            position: absolute;
+            top: 30%;
+            animation: bounce 2s infinite;
+        }
+
+        .firework {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: transparent;
+            box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: explode 1.5s ease-out infinite;
+        }
+
+        /* Fuegos artificiales */
+        @keyframes explode {
+            0% {
+                transform: scale(0);
+            }
+            50% {
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(1.5);
+            }
+        }
+
+        /* Movimiento del texto */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Animación del confeti */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff69b4;
+            animation: fall 4s infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                top: -10%;
+                transform: rotate(0);
+            }
+            100% {
+                top: 100%;
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Ajuste de las posiciones iniciales de los elementos */
+        .firework:nth-child(1) { top: 20%; left: 40%; animation-delay: 0s; }
+        .firework:nth-child(2) { top: 30%; left: 60%; animation-delay: 0.3s; }
+        .firework:nth-child(3) { top: 50%; left: 20%; animation-delay: 0.5s; }
+
+        .confetti:nth-child(4) { left: 30%; animation-delay: 0.2s; }
+        .confetti:nth-child(5) { left: 50%; animation-delay: 0.6s; }
+        .confetti:nth-child(6) { left: 70%; animation-delay: 1s; }
+
+        .animal:nth-child(7) { left: 10%; }
+        .animal:nth-child(8) { right: 10%; }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday!</h1>
+
+     <!-- Contenedor principal de todos los fuegos artificiales -->
+    <div class="fireworks-wrapper">
+        
+        <!-- Fuego artificial 1 (Amarillo oscuro) -->
+        <div class="firework-container" style="top: 10%; left: 20%;">
+            <div class="firework dark-yellow">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+
+        <!-- Fuego artificial 2 (Rojo oscuro) -->
+        <div class="firework-container" style="top: 40%; left: 70%;">
+            <div class="firework dark-red">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+
+        <!-- Fuego artificial 3 (Azul oscuro) -->
+        <div class="firework-container" style="top: 70%; left: 30%;">
+            <div class="firework dark-blue">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+
+        <!-- Fuego artificial 4 (Verde oscuro) -->
+        <div class="firework-container" style="top: 20%; left: 80%;">
+            <div class="firework dark-green">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+
+        <!-- Fuego artificial 5 (Naranja oscuro) -->
+        <div class="firework-container" style="top: 50%; left: 50%;">
+            <div class="firework dark-orange">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+
+        <!-- Fuego artificial 6 (Morado oscuro) -->
+        <div class="firework-container" style="top: 15%; left: 60%;">
+            <div class="firework dark-purple">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+
+        <!-- Fuego artificial 7 (Rosa oscuro) -->
+        <div class="firework-container" style="top: 65%; left: 10%;">
+            <div class="firework dark-pink">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+
+        <!-- Fuego artificial 8 (Cyan oscuro) -->
+        <div class="firework-container" style="top: 80%; left: 85%;">
+            <div class="firework dark-cyan">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+        </div>
+
+    </div>
+
+<!-- Confeti -->
+<div class="confetti"></div>
+<div class="confetti"></div>
+<div class="confetti"></div>
+<div class="confetti"></div>
+<div class="confetti"></div>
+<div class="confetti"></div>
+<div class="confetti"></div>
+<div class="confetti"></div>
+<div class="confetti"></div>
+
+
+
+    <script src="scripts.js"></script></body>
+</html>

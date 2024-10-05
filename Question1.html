@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:#e5f5fc; 
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        p {
+            font-size: 2em;
+        }
+        button {
+            background-color: #ecf6aa;
+            color: rgb(6, 3, 3);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #f0ff82;
+        }
+        #yes-no-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <section>
+            <p>¿Es doña Ana la más wapa?</p>
+            <div id="yes-no-buttons">
+                <button id="yes-btn">Yes 😍</button>
+                <button id="no-btn">No 😡</button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.getElementById("yes-btn").addEventListener("click", function() {
+            // Redirige a la página sorpresa
+            window.location.href = "Yes1.html";  // Cambia esto por la página que crearás
+        });
+
+        document.getElementById("no-btn").addEventListener("click", function() {
+            // Redirige a la página de error
+            window.location.href = "No1.html";
+        });
+    </script>
+</body>
+</html>
